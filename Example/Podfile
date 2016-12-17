@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'BSSliderView_Example' do
+  pod 'BSSliderView', :path => '../'
+
+  target 'BSSliderView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
