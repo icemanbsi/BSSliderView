@@ -31,7 +31,7 @@ class BSSliderCollectionViewLayout: UICollectionViewFlowLayout {
         {
             let itemSize: CGSize = CGSize(
                 width: self.collectionView!.frame.size.width,
-                height: self.collectionView!.frame.size.width)
+                height: self.collectionView!.frame.size.height)
             
             if itemSize.height > contentHeight {
                 contentHeight = itemSize.height
