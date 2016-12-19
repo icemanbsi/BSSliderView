@@ -292,7 +292,7 @@ public protocol BSSliderViewDataSource: class {
             var currentIndex: Int = Int(floor(offset.x / itemWidth))
             
             var nextIndex: Int = currentIndex
-            var currentItemOffset = (offset.x - (CGFloat(currentIndex) * itemWidth)) / itemWidth
+            let currentItemOffset = (offset.x - (CGFloat(currentIndex) * itemWidth)) / itemWidth
             
             if currentIndex == self.currentSlideIndex { //swipe left
                 if currentItemOffset > 0.4 {
