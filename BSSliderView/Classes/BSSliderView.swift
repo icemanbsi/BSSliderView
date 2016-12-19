@@ -110,6 +110,7 @@ public protocol BSSliderViewDataSource: class {
     
     
     fileprivate func setup() {
+        self.sliderCollectionView.bounces = false
         self.sliderCollectionView.backgroundColor = UIColor.white
         self.sliderCollectionView.showsVerticalScrollIndicator = false
         self.sliderCollectionView.showsHorizontalScrollIndicator = false
