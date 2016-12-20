@@ -36,6 +36,7 @@ public protocol BSSliderViewDataSource: class {
     
     public var isAutoPlay: Bool = true
     public var autoPlaySpeed: TimeInterval = 5
+    @IBInspectable public var paginationMarginBottom: CGFloat = 8.0
     @IBInspectable public var paginationDotSize: CGFloat = 15.0
     @IBInspectable public var paginationDotMargin: CGFloat = 10.0
     @IBInspectable public var paginationDotBorderWidth: CGFloat = 2.0
@@ -166,7 +167,7 @@ public protocol BSSliderViewDataSource: class {
             toItem: self.paginationView,
             attribute: NSLayoutAttribute.bottom,
             multiplier: 1.0,
-            constant: 8.0
+            constant: self.paginationMarginBottom
         ))
         self.addConstraint(NSLayoutConstraint(
             item: self.paginationView,
