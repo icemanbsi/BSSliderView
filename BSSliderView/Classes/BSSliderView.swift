@@ -108,7 +108,9 @@ public protocol BSSliderViewDataSource: class {
         super.prepareForInterfaceBuilder()
     }
     
-    
+    deinit {
+        self.sliderCollectionView.removeObserver(self, forKeyPath: "contentSize")
+    }
     
     fileprivate func setup() {
         self.sliderCollectionView.bounces = false
